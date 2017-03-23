@@ -13,6 +13,8 @@
 		D4A337C51E84298E00CE8D1E /* ConsoleCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4A337C31E84298E00CE8D1E /* ConsoleCollector.xcdatamodeld */; };
 		D4A337C71E84298E00CE8D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A337C61E84298E00CE8D1E /* Assets.xcassets */; };
 		D4A337CA1E84298E00CE8D1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A337C81E84298E00CE8D1E /* LaunchScreen.storyboard */; };
+		D4A337D21E84359B00CE8D1E /* Game.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D4A337D11E84359A00CE8D1E /* Game.jpeg */; };
+		D4A337D41E84423900CE8D1E /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A337D31E84423900CE8D1E /* ConsoleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D4A337C61E84298E00CE8D1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4A337C91E84298E00CE8D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4A337CB1E84298E00CE8D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A337D11E84359A00CE8D1E /* Game.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Game.jpeg; sourceTree = "<group>"; };
+		D4A337D31E84423900CE8D1E /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		D4A337BB1E84298E00CE8D1E /* ConsoleCollector */ = {
 			isa = PBXGroup;
 			children = (
+				D4A337D11E84359A00CE8D1E /* Game.jpeg */,
 				D4A337BC1E84298E00CE8D1E /* AppDelegate.swift */,
 				D4A337BE1E84298E00CE8D1E /* ViewController.swift */,
+				D4A337D31E84423900CE8D1E /* ConsoleViewController.swift */,
 				D4A337C01E84298E00CE8D1E /* Main.storyboard */,
 				D4A337C61E84298E00CE8D1E /* Assets.xcassets */,
 				D4A337C81E84298E00CE8D1E /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A337D21E84359B00CE8D1E /* Game.jpeg in Resources */,
 				D4A337CA1E84298E00CE8D1E /* LaunchScreen.storyboard in Resources */,
 				D4A337C71E84298E00CE8D1E /* Assets.xcassets in Resources */,
 				D4A337C21E84298E00CE8D1E /* Main.storyboard in Resources */,
@@ -140,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A337D41E84423900CE8D1E /* ConsoleViewController.swift in Sources */,
 				D4A337BF1E84298E00CE8D1E /* ViewController.swift in Sources */,
 				D4A337C51E84298E00CE8D1E /* ConsoleCollector.xcdatamodeld in Sources */,
 				D4A337BD1E84298E00CE8D1E /* AppDelegate.swift in Sources */,

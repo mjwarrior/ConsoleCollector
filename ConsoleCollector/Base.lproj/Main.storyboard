@@ -35,19 +35,19 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Console View Controller-->
         <scene sceneID="vYd-H5-uBG">
             <objects>
-                <viewController id="t0V-LZ-ptz" sceneMemberID="viewController">
+                <viewController id="t0V-LZ-ptz" customClass="ConsoleViewController" customModule="ConsoleCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qo5-ll-7oA"/>
                         <viewControllerLayoutGuide type="bottom" id="ugy-TN-PET"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bWp-qr-hWZ">
+                    <view key="view" contentMode="scaleAspectFill" id="bWp-qr-hWZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-qe-T8H">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-qe-T8H">
                                 <rect key="frame" x="47.5" y="212" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,8 +56,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-Aa-udt">
                                 <rect key="frame" x="172" y="262" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="t0V-LZ-ptz" eventType="touchUpInside" id="D6S-8N-N1p"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-4C-ias">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-4C-ias">
                                 <rect key="frame" x="47" y="84" width="280" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="Leb-wy-09W"/>
@@ -80,12 +83,22 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="hpg-YQ-XKj">
                                 <color key="tintColor" red="0.020193658769130707" green="0.023292874917387962" blue="0.023409541696310043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="t0V-LZ-ptz" id="K7H-aE-SuV"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Photos" id="TTQ-EH-Uev">
                                 <color key="tintColor" red="0.035570725798606873" green="0.067757166922092438" blue="0.058129601180553436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="photosTapped:" destination="t0V-LZ-ptz" id="NW7-fL-Rul"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="consoleImageView" destination="nnA-4C-ias" id="LBA-bz-xIh"/>
+                        <outlet property="titleTextField" destination="Yzg-qe-T8H" id="ubG-uY-ikl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsE-EE-Ei6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,4 +123,7 @@
             <point key="canvasLocation" x="39" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Game.jpeg" width="450" height="112"/>
+    </resources>
 </document>
