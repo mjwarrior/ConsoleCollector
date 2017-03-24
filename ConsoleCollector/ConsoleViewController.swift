@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ConsoleViewController: UIViewController {
+class ConsoleViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
-   
+   var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var titleTextField: UITextField!
    
@@ -19,10 +19,16 @@ class ConsoleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       imagePicker.delegate = self
+     
     }
 
     @IBAction func photosTapped(_ sender: Any) {
+    
+    imagePicker.sourceType = .photoLibrary
+        
+    present(imagePicker, animated: true, completion: nil)
+    
     }
   
     @IBAction func cameraTapped(_ sender: Any) {
