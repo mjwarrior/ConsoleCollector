@@ -47,7 +47,45 @@ class ConsoleViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func addTapped(_ sender: Any) {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let console = GameConsole(context: context)
+        console.title = titleTextField.text
+        console.image =  UIImagePNGRepresentation(consoleImageView.image!) as NSData?
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }
