@@ -55,6 +55,7 @@ class ConsoleViewController: UIViewController, UIImagePickerControllerDelegate, 
         console.image =  UIImagePNGRepresentation(consoleImageView.image!) as NSData?
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
     
+        navigationController!.popViewController(animated: true)
     }
     
     
