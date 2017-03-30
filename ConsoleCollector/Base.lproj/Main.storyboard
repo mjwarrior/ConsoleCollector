@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="grn-it-QNr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q5I-hV-B7r">
                             <connections>
-                                <segue destination="t0V-LZ-ptz" kind="show" id="vPv-lU-ln8"/>
+                                <segue destination="t0V-LZ-ptz" kind="show" identifier="consoleSegue" id="vPv-lU-ln8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,10 +82,19 @@
                                     <constraint firstAttribute="height" constant="100" id="iIp-qO-4b6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaX-BT-aks">
+                                <rect key="frame" x="165" y="300" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="t0V-LZ-ptz" eventType="touchUpInside" id="mMN-FG-3tJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Yzg-qe-T8H" firstAttribute="top" secondItem="nnA-4C-ias" secondAttribute="bottom" constant="28" id="1OB-CX-tFB"/>
+                            <constraint firstItem="EaX-BT-aks" firstAttribute="top" secondItem="Cdg-Aa-udt" secondAttribute="bottom" constant="8" id="3P0-WJ-p5K"/>
+                            <constraint firstItem="EaX-BT-aks" firstAttribute="centerX" secondItem="bWp-qr-hWZ" secondAttribute="centerX" id="Mz0-LD-lh8"/>
                             <constraint firstItem="Cdg-Aa-udt" firstAttribute="centerX" secondItem="bWp-qr-hWZ" secondAttribute="centerX" id="ZxT-eY-QLq"/>
                             <constraint firstItem="nnA-4C-ias" firstAttribute="top" secondItem="qo5-ll-7oA" secondAttribute="bottom" constant="20" id="a6Y-y2-bla"/>
                             <constraint firstItem="nnA-4C-ias" firstAttribute="centerX" secondItem="bWp-qr-hWZ" secondAttribute="centerX" id="lgA-rL-Zk3"/>
@@ -111,7 +120,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdatebutton" destination="Cdg-Aa-udt" id="eJ3-mk-GNw"/>
                         <outlet property="consoleImageView" destination="nnA-4C-ias" id="LBA-bz-xIh"/>
+                        <outlet property="deleteButton" destination="EaX-BT-aks" id="1I0-G9-ygL"/>
                         <outlet property="titleTextField" destination="Yzg-qe-T8H" id="ubG-uY-ikl"/>
                     </connections>
                 </viewController>

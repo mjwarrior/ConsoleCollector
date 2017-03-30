@@ -11,6 +11,11 @@ import UIKit
 class ConsoleViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
    var imagePicker = UIImagePickerController()
+    var console : GameConsole? = nil
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var addupdatebutton: UIButton!
     
     @IBOutlet weak var titleTextField: UITextField!
    
@@ -21,6 +26,15 @@ class ConsoleViewController: UIViewController, UIImagePickerControllerDelegate, 
 
        imagePicker.delegate = self
      
+        if console != nil {
+        consoleImageView.image = UIImage(data: console!.image as! Data)
+        titleTextField.text = console!.title
+        
+        addupdatebutton.setTitle("Update", for: .normal)
+            
+        } else {
+          deleteButton.isHidden = true 
+        }
     }
 
     @IBAction func photosTapped(_ sender: Any) {

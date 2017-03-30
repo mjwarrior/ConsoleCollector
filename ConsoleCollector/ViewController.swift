@@ -50,6 +50,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageView?.image = UIImage(data: console.image as! Data)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     let console = consoles[indexPath.row]
+     performSegue(withIdentifier: "consoleSegue", sender: console)
+    
+    
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! ConsoleViewController
+        nextVC.console = sender as? GameConsole
+    }
+    
+    
     
 }
 
