@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-qe-T8H">
-                                <rect key="frame" x="47.5" y="212" width="280" height="30"/>
+                                <rect key="frame" x="48" y="212" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -87,6 +87,7 @@
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="addTapped:" destination="t0V-LZ-ptz" eventType="touchUpInside" id="mMN-FG-3tJ"/>
+                                    <action selector="deleteTapped:" destination="t0V-LZ-ptz" eventType="touchUpInside" id="nRB-xV-yBS"/>
                                 </connections>
                             </button>
                         </subviews>

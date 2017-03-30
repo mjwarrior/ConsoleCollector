@@ -62,18 +62,38 @@ class ConsoleViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func addTapped(_ sender: Any) {
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if console != nil {
+            console!.title = titleTextField.text
+            console!.image =  UIImagePNGRepresentation(consoleImageView.image!) as NSData?
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let console = GameConsole(context: context)
+            console.title = titleTextField.text
+            console.image =  UIImagePNGRepresentation(consoleImageView.image!) as NSData?
+ 
+        }
         
-        let console = GameConsole(context: context)
-        console.title = titleTextField.text
-        console.image =  UIImagePNGRepresentation(consoleImageView.image!) as NSData?
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+                (UIApplication.shared.delegate as! AppDelegate).saveContext()
     
         navigationController!.popViewController(animated: true)
     }
     
     
     
+    @IBAction func deleteTapped(_ sender: Any) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    context.delete(console!)
+
+    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+    navigationController!.popViewController(animated: true)
+    
+        
+        
+        
+    }
     
     
     
